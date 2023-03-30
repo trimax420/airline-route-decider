@@ -1,0 +1,15 @@
+<html>
+    <body>
+        test
+        <form method="post">
+            {% csrf_token %}  
+            
+             
+             {{ form }}
+             <button type="submit">Submit</button>
+            
+           </form>
+           {{result}}
+           
+    </body>
+</html>
