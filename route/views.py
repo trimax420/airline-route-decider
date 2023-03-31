@@ -7,11 +7,11 @@ import math
 tree_model = DecisionTreeRegressor()
 
 le = preprocessing.LabelEncoder()
-routes = read_csv(r"dataset\routes.csv")
-to_demand = read_csv(r"dataset\todemand.csv")
-from_demand = read_csv(r"dataset\fromdemand.csv")
-data = read_csv(r"dataset\data_new.csv")
-data_routes = read_csv(r"dataset\routeswithdist.csv")
+routes = read_csv("dataset\routes.csv")
+to_demand = read_csv("dataset\todemand.csv")
+from_demand = read_csv("dataset\fromdemand.csv")
+data = read_csv("dataset\data_new.csv")
+data_routes = read_csv("dataset\routeswithdist.csv")
 
 q1 = data_routes[['distance']].quantile(0.25).values
 q3 = data_routes[['distance']].quantile(0.75).values
