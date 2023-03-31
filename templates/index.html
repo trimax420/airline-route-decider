@@ -34,7 +34,7 @@
         <div class="container-fluid">
             <div class="navbar-brand">
                 
-                <span class="navbar-caption-wrap"><a class="navbar-caption text-white display-7" href="https://mobiri.se">SAD 2.0 - Air Route Suggestion System</a></span>
+                <span class="navbar-caption-wrap"><a class="navbar-caption text-white display-7">SAD 2.0 - Air Route Suggestion System</a></span>
             </div>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbarSupportedContent" data-bs-target="#navbarSupportedContent" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <div class="hamburger">
@@ -70,7 +70,7 @@
                 <form  method="POST" data-rcpha_sitekey="" data-rcpha_secretkey="" class="mbr-form form-with-styler mx-auto" data-verified="">
                     {% csrf_token %}
                     <div class="dragArea row">
-                        {{form.as_p}}
+                        {{form}}
                         
                         <div class="col-auto mbr-section-btn align-center"><button type="submit" class="btn btn-black display-4">Submit</button></div>
                     </div>
@@ -86,7 +86,7 @@
         <div class="row justify-content-center">
             <div class="col-md-12 col-lg-10">
                 <hr class="line">
-                <p class="mbr-text align-center mbr-fonts-style my-4 display-5">{{result}}</p>
+                <a href = "{% url 'airport' %}"><p class="mbr-text align-center mbr-fonts-style my-4 display-5">{{result}}</p></a>
                 <hr class="line">
             </div>
         </div>
